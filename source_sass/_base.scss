@@ -1,1 +1,163 @@
-// Add any custom Sass & CSS here
+h1 {
+	font-size: $title;
+}
+
+h2 {
+	font-size: $sub_title;
+}
+
+.normal {
+	font-weight: normal;
+	float: right;
+}
+
+.header {
+	position: relative;
+	background-image: url("../media/skyline.jpg");
+	background-size: cover;
+	background-position: 100% 50%;
+	height: 520px;
+}
+
+.header-text {
+	color: $white;
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.intro-buttons button {
+	border-style: solid;
+	border-width: 2px;
+	padding: 5px;
+	margin: 5px;
+	font-weight: bold;
+}
+
+.intro-buttons button:hover {
+	background-color: $gray;
+}
+
+.fullwidth {
+	width: 100%;
+}
+.stripe {
+	height: 500px;
+	position: relative;
+}
+
+.odd {
+	background-color: $white;
+}
+
+.even {
+	background-color: $silver;
+}
+
+.examples a {
+	color: $gray;
+}
+.examples h2 {
+	text-align: center;
+	font-size: 30px;
+}
+
+.carousel {
+	text-align: center;
+}
+
+.carousel p {
+	color: $blue;
+	font-weight: bold;
+}
+
+.slick-prev:before, .slick-next:before{
+    color: $gray;
+    font-size: 30px;
+}
+
+.slick-prev {
+	left: 45px;
+	z-index: 9000;
+}
+
+.slick-next {
+	right: 45px;
+}
+
+.details, .video {
+	margin: 50px auto;
+}
+
+.details h2 {
+	font-weight: bold;
+}
+
+.details ul {
+	list-style-image: url('../media/checkmark.png');
+}
+
+.video {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+
+video {
+	position:absolute;
+	top: 65px;
+	left: -20px;
+	width: 108%;
+	height: 80%;
+}
+
+.bg {
+	background-image: url('../media/skyline.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 300px;
+}
+
+.form-title {
+	margin: 5px;
+	font-size: 24px;
+}
+.job-form {
+	position: absolute;
+	width: 800px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.job-form input:nth-child(1), .job-form input:nth-child(2) {
+	width: 300px;
+	display: inline-block;
+	margin: 5px;
+}
+
+.job-form button {
+	margin-top: 11px;
+}
+
+/* Footer */
+footer {
+	position: relative;
+	height: 100px;
+}
+
+.footer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.media {
+	height: 30px;
+	width: 30px;
+}
