@@ -80,10 +80,14 @@ h2 {
 .slick-prev {
 	left: 45px;
 	z-index: 9000;
+	width: 33px;
+	height: 30px;
 }
 
 .slick-next {
 	right: 45px;
+	width: 33px;
+	height: 30px;
 }
 
 .details, .video {
