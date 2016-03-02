@@ -43,9 +43,7 @@
 	color: $mobile_menu_font_color;
 	border-style: solid;
 	border-color: $mobile_menu_border;
-	border-left: none;
-	border-right: none;
-	border-top: none;
+	@include border_bottom();
 	border-width: 1px;
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -62,12 +60,10 @@
 	}
 }
 .top-bar {
-	-webkit-transition: all 0.4s ease;
-   transition: all 0.4s ease;
+	@include nav_transition(0.4s);
 }
 #nav li {
-	-webkit-transition: all 0.4s ease;
-   transition: all 0.4s ease;
+	@include nav_transition(0.4s);
 }
 
 /* Content */
