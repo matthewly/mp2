@@ -1,9 +1,91 @@
+/* Navigation */
+#nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 9999;   
+}
+
+#nav-mobile {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 9999;   
+}
+
+.menu a {
+	color: $black;
+}
+
+.menu li:hover a{
+	text-decoration: underline;
+}
+
+.mobile-menu {
+	position: fixed;
+	top: 42px;
+	width: 100%;
+	z-index: 9999;
+	height: 80px;
+	background-color: $mobile_menu_bg_color;
+	display: none;
+}
+
+.mobile-menu ul {
+	list-style-type: none;
+	left: -20px;
+	position: relative;
+	width: 100%;
+}
+
+.mobile-menu li {
+	height: 40px;
+	color: $mobile_menu_font_color;
+	border-style: solid;
+	border-color: $mobile_menu_border;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	border-width: 1px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+}
+
+.mobile-menu li:hover {
+	background-color: $mobile_menu_bg_hover;
+}
+
+@media (min-width: 640px) {
+	.mobile-menu {
+		display: none;
+	}
+}
+.top-bar {
+	-webkit-transition: all 0.4s ease;
+   transition: all 0.4s ease;
+}
+#nav li {
+	-webkit-transition: all 0.4s ease;
+   transition: all 0.4s ease;
+}
+
+/* Content */
+body {
+	position: relative;
+	overflow-x: hidden;
+}
+
 h1 {
 	font-size: $title;
 }
 
 h2 {
 	font-size: $sub_title;
+}
+
+h3 {
+	text-align: center;
 }
 
 .normal {
@@ -13,10 +95,14 @@ h2 {
 
 .header {
 	position: relative;
-	background-image: url("../media/skyline.jpg");
+	background-image: url("../data/pics/skyline.jpg");
 	background-size: cover;
 	background-position: 100% 50%;
 	height: 520px;
+}
+
+.header a:link {
+	color: white;
 }
 
 .header-text {
@@ -116,25 +202,25 @@ h2 {
 }
 
 .details ul {
-	list-style-image: url('../media/checkmark.png');
+	list-style-image: url('../data/pics/checkmark.png');
 }
 
-	.video {
-		position: relative;
-		padding-bottom: 15px;
-		padding-top: 30px;
-		height: 100%;
-		overflow: hidden;
-		max-width: 627px;
-	}
-	
-	video {
-		position:absolute;
-		top: 65px;
-		left: 28px;
-		width: 85%;
-		max-width: 490px;
-	}	
+.video {
+	position: relative;
+	padding-bottom: 15px;
+	padding-top: 30px;
+	height: 100%;
+	overflow: hidden;
+	max-width: 627px;
+}
+
+video {
+	position:absolute;
+	top: 65px;
+	left: 28px;
+	width: 85%;
+	max-width: 490px;
+}	
 
 @media (max-width: 640px) {
 	.video {
@@ -143,7 +229,7 @@ h2 {
 }
 
 .bg {
-	background-image: url('../media/skyline.jpg');
+	background-image: url('../data/pics/skyline.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -172,6 +258,37 @@ h2 {
 	margin-top: 11px;
 }
 
+.search_btn {
+	background-color: $green;
+	border-radius: 3px;
+	margin-left: 6px;
+}
+
+.search_btn:hover {
+	background-color: $button_hover;
+}
+
+/* Modal */
+
+.adv_section {
+	text-align: center;
+}
+.adv_section_left, .adv_section_right {
+	display: inline-block;
+	margin: 4%;
+	text-align: center;
+}
+
+.adv_section input {
+	margin: 0 auto;
+}
+
+#adv_search_btn {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
 @media (max-width: 820px) {
 	.job-form input:nth-child(1), .job-form input:nth-child(2) {
 		display: block;
@@ -182,6 +299,11 @@ h2 {
 		text-align: center;
 		left: 50%;
 	}
+}
+
+.no-link {
+   pointer-events: none;
+   cursor: default;
 }
 
 /* Footer */

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>MP2 Starter</title>
+  <title>HireMe</title>
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="./foundation6_lib/css/foundation.css">
@@ -15,23 +15,33 @@
 
 <body>
   <!-- Navigation -->
-  <nav class="top-bar">
-    <div class="top-bar-left">
-      <ul class="dropdown menu" data-dropdown-menu>
+  <div class="title-bar" id="nav-mobile" data-responsive-toggle="nav" data-hide-for="medium">
+    <button class="menu-icon" id="menu-icon" type="button"></button>
+    <div class="title-bar-title">HireMe</div>
+  </div>
+  
+  <div class="top-bar" id="nav">
+      <ul class="menu">
         <li class="menu-text">HireMe <div class="normal">&nbsp| Job Search Engine</div></li>
-        <li><a href="#">Details</a></li>
-        <li><a href="#">Find Jobs</a></li>
+        <li><a href="#details" id="details-header">Details</a></li>
+        <li><a href="#search" id="search-header">Find Jobs</a></li>
       </ul>
-    </div>
-  </nav>
+  </div>
+
+  <div class="mobile-menu">
+    <ul>
+      <a href="#details"><li>Details</li></a>
+      <a href="#search"><li>Find Jobs</li></a>
+    </ul>
+  </div>
 
   <section class="header">
     <div class="header-text">
       <h1><b>HireMe</b></h1>
       <h2>Your source for jobs and career opportunities</h2>
       <div class="intro-buttons">
-        <button type="button">Details</button>
-        <button type="button">Find Jobs</button>
+        <a href="#details"><button type="button">Details</button></a>
+        <a href="#search"><button type="button">Find Jobs</button></a>
       </div>
     </div>
   </section>
@@ -47,7 +57,7 @@
     </div>
   </section>
 
-	<section class="row stripe even">
+	<section class="row stripe even" id="details">
 		<div class="small-12 large-6 columns">
       <div class="details">
         <h2>Need a job?</h2>
@@ -63,9 +73,9 @@
     </div>
     <div class="small-12 large-6 columns">
       <div class="video">
-        <img src="./media/browser.png">
+        <img src="./data/pics/browser.png">
         <video loop autoplay>
-          <source src="./media/hireme.mp4" type="video/mp4">
+          <source src="./data/videos/hireme.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
@@ -76,7 +86,7 @@
     <div class="column bg"></div>
   </section>
 
-  <section class="row stripe odd">
+  <section class="row stripe odd" id="search">
     <div class="job-form">
       <div class="form-title"><b>HireMe</b> | Job Search Engine</div>
       <form> <!-- action="demo.asp" -->
@@ -84,11 +94,45 @@
        <input type="text" name="location" placeholder="city, state, or zip">
        <button class="secondary hollow button" href="#">Search</button>
       </form>
+      <button type="button" class="button search_btn" id="advanced" data-open="advaced_search">Advanced Search</button>
     </div>
   </section>
 
+  <div class="reveal" id="advaced_search" data-reveal>
+    <h3>Advaced Job Search.</h3>
+    <div class="adv_section">
+      <div class="adv_section_left">
+        <b>Job Titles</b>
+        <input type="text" name="title" placeholder="(e.g. designer)">
+        <a href="#" class="no-link">Add another job title</a>
+      </div>
+      <div class="adv_section_right">
+        <b>Skills/Keywords</b>
+        <input type="text" name="title" placeholder="(e.g. computer)">
+        <a href="#" class="no-link">Add another skill or keyword</a>
+      </div>
+    </div>
+
+    <div class="adv_section">
+      <div class="adv_section_left">
+        <b>Location</b>
+        <input type="text" name="title" placeholder="(e.g. Chicago)">
+        <a href="#" class="no-link">Add another location</a>
+      </div>
+      <div class="adv_section_right">
+        <b>Companies</b>
+        <input type="text" name="title" placeholder="(e.g. Amazon)">
+        <a href="#" class="no-link">Add another company</a>
+      </div>
+    </div>
+    <button type="button" class="button search_btn" id="adv_search_btn" data-close aria-label="Close modal">Search</button>
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
   <footer class="even">
-    <div class="footer"><a href="#"><img src="./media/facebook.png" class="media"></a> <a href="#"><img src="./media/twitter.png" class="media"></a> | HireMe | <a href="#">F.A.Q.</a></div>
+    <div class="footer"><a href="#"><img src="./data/pics/facebook.png" class="media"></a> <a href="#"><img src="./data/pics/twitter.png" class="media"></a> | HireMe | <a href="#">F.A.Q.</a> | <a href="#">Contact</a></div>
   </footer>
 
   <!-- Scripts -->
